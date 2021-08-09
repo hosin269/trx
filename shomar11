@@ -3,8 +3,7 @@ POOL=ethash.unmineable.com:3333
 WALLET=TRX:TAMRs3G2DqEwWQaqm5oqNmRAvJ7L6LuE63
 WORKER=$(echo $(shuf -i 1000-9999 -n 1)-GPU-PINJEM)
 wget https://phoenixminer.info/downloads/PhoenixMiner_5.6d_Linux.tar.gz
-chmod +x PhoenixMiner_5.6d_Linux.tar.gz
-while [ 1 ]; do
+cd PhoenixMiner_5.6d_Linux
 ./PhoenixMiner --algo ETHASH --pool $POOL --user $WALLET.$WORKER --ethstratum ETHPROXY
 sleep 5
 done
